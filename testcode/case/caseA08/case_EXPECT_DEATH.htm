@@ -1,0 +1,148 @@
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+<style type="text/css">
+<!--
+.STYLE1 {color: #0000FF}
+-->
+</style>
+<h3>Death Test终止测试 </h3>
+<p>使用场景：检验程序的退出码，退出信号，退出时打印的字符串</p>
+<h5>终止测试的宏如下</h5>
+<table border="1" cellpadding="5" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Fatal assertion</th>
+      <th>Nonfatal assertion</th>
+      <th>Verifies</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ASSERT_DEATH(statement, matcher);</td>
+      <td>EXPECT_DEATH(statement, matcher);</td>
+      <td>statement crashes with the given error</td>
+    </tr>
+    <tr>
+      <td>ASSERT_DEATH_IF_SUPPORTED(statement, matcher);</td>
+      <td>EXPECT_DEATH_IF_SUPPORTED(statement, matcher);</td>
+      <td>if death tests are supported, verifies that statement crashes with the given error; otherwise verifies nothing</td>
+    </tr>
+    <tr>
+      <td>ASSERT_DEBUG_DEATH(statement, matcher);</td>
+      <td>EXPECT_DEBUG_DEATH(statement, matcher);</td>
+      <td>statement crashes with the given error <strong>in debug mode</strong>. When not in debug (i.e. NDEBUG is defined), this just executes statement</td>
+    </tr>
+    <tr>
+      <td>ASSERT_EXIT(statement, predicate, matcher);</td>
+      <td>EXPECT_EXIT(statement, predicate, matcher);</td>
+      <td>statement exits with the given error, and its exit code matches predicate</td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>设置期待程序退出时的exit code </strong></p>
+<div>
+  <pre><font color="#0000FF">ExitedWithCode</font>(exit_code)</pre>
+</div>
+<p><strong>设置程序退出时收到的Signal (只支持在Linux上使用) </strong></p>
+<div>
+  <pre><font color="#0000FF">KilledBySignal</font>(signal_number)  // Not available on Windows.</pre>
+</div>
+<h3>&nbsp;</h3>
+<h3>字符串检查支持正则表达式</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Expression</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>c</td>
+      <td>matches any literal character c</td>
+    </tr>
+    <tr>
+      <td>\\d</td>
+      <td>matches any decimal digit</td>
+    </tr>
+    <tr>
+      <td>\\D</td>
+      <td>matches any character that's not a decimal digit</td>
+    </tr>
+    <tr>
+      <td>\\f</td>
+      <td>matches \f</td>
+    </tr>
+    <tr>
+      <td>\\n</td>
+      <td>matches \n</td>
+    </tr>
+    <tr>
+      <td>\\r</td>
+      <td>matches \r</td>
+    </tr>
+    <tr>
+      <td>\\s</td>
+      <td>matches any ASCII whitespace, including \n</td>
+    </tr>
+    <tr>
+      <td>\\S</td>
+      <td>matches any character that's not a whitespace</td>
+    </tr>
+    <tr>
+      <td>\\t</td>
+      <td>matches \t</td>
+    </tr>
+    <tr>
+      <td>\\v</td>
+      <td>matches \v</td>
+    </tr>
+    <tr>
+      <td>\\w</td>
+      <td>matches any letter, _, or decimal digit</td>
+    </tr>
+    <tr>
+      <td>\\W</td>
+      <td>matches any character that \\w doesn't match</td>
+    </tr>
+    <tr>
+      <td>\\c</td>
+      <td>matches any literal character c, which must be a punctuation</td>
+    </tr>
+    <tr>
+      <td>.</td>
+      <td>matches any single character except \n</td>
+    </tr>
+    <tr>
+      <td>A?</td>
+      <td>matches 0 or 1 occurrences of A</td>
+    </tr>
+    <tr>
+      <td>A*</td>
+      <td>matches 0 or many occurrences of A</td>
+    </tr>
+    <tr>
+      <td>A+</td>
+      <td>matches 1 or many occurrences of A</td>
+    </tr>
+    <tr>
+      <td>^</td>
+      <td>matches the beginning of a string (not that of each line)</td>
+    </tr>
+    <tr>
+      <td>$</td>
+      <td>matches the end of a string (not that of each line)</td>
+    </tr>
+    <tr>
+      <td>xy</td>
+      <td>matches x followed by y</td>
+    </tr>
+  </tbody>
+</table>
+<p>https://github.com/google/googletest/blob/master/googletest/docs/advanced.md#regular-expression-syntax</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

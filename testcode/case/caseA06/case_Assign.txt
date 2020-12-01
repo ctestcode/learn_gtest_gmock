@@ -1,0 +1,4 @@
+Assign ==>Assign 关键字。可以改变环境变量，称为 副作用动作, 使用场景: 改变局部变量的值。
+Assign(&value,2) ==> 改变局部变量 value的值为2. 
+DoAll ==>注意 ，需要用DoAll 链接 Assign和Return两个动作。
+EXPECT_EQ(value ==>验证value的值为2

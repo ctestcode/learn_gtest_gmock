@@ -1,0 +1,6 @@
+学习:   ==>Times()  和 WillRepeatedly() 的使用
+Times(3)   ==>Times() 设置期望的Mock运行的次数，这里设置3次
+WillOnce(Return   ==>设置其中一次期望的返回值。
+AtMost( ==>设置Times运行至多几次
+WillRepeatedly(Return ==> 设置期望MOCK getLevel 一直重复运行，并一直返回LOW_LEVEL。
+Times(0)==>  设置期望getLevel不被运行到。

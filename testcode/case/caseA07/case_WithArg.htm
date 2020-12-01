@@ -1,0 +1,23 @@
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+
+<h3> WithArg 动作 使用场景：MOCK调用后，自定义动作里可以处理指定的MOCK函数的参数</h3>
+<p>有时候单独比较一个参数并不满足需求。比如要求第一个参数比第二个参数大，就需要用到多参数匹配关键字With()</p>
+<div>
+  <pre>   EXPECT_CALL(_mock,add)<br>        .With(Gt());</pre>
+</div>
+<p>上述例子，对参数0 和参数1进行匹配，期待参数1大于参数 2。</p>
+<p>也可以使用AllArgs来表达。下列的例子和上面例子意义一样，但可读性更强。</p>
+<div>
+  <pre> EXPECT_CALL(_mock,addtest)<br>        .With(AllArgs(myGt()));;</pre>
+</div>
+<p>你可以使用Args&lt;k1, ..., kn&gt;(m) 选择参数去匹配.,例子如下：对MOCK addtest的参数0和参数1进行匹配</p>
+<div>
+  <pre>EXPECT_CALL(_mock,addtest)<br>        .With(Args&lt;0,1&gt;(myGt()));</pre>
+</div>
+<p>&nbsp;</p>
+<p>引用：<br />  
+  https://github.com/google/googletest/blob/master/googlemock/docs/cheat_sheet.md#composite-actions </p>
+  </body>
+</html>

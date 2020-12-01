@@ -1,0 +1,9 @@
+学习==>ASSERT_TRUE,使用场景: 验证结果为真，失败时，程序退出
+add  ==> 调用 被测函数add,测试short溢出的情况 (-32768---32767 )
+ASSERT_TRUE(  ==> 验证 所期待的条件为 真
+<<" ==> 验证失败时，则会输出信息。
+Hello Gtest ==>  观察:ASSERT_XXX当失败时，后面的代码则不会被运行
+case_ASSERT_TRUE.c:  ==>2  观察:ASSERT_XXX当失败时输出的结果
+Actual: ==>2   观察: 实际ASSERT 判定为: false
+Expected:  ==>2    观察: 期待判断为True,和 实际不符。
+FAILED   ==>2    FAILED显示,单元测试没有通过

@@ -1,0 +1,4 @@
+EXPECT_PRED_FORMAT2 ==> EXPECT_PRED_FORMAT2 使用场景: 错误时，完全自定义错误消息
+EXPECT_PRED2(==> EXPECT_PRED2错误消息比较
+a evaluates to 5 ==>2 EXPECT_PRED错误时，默认消息的格式
+add a(5)+b(1)<10    ==>2 可以完全自定义错误发生时的消息格式

@@ -1,0 +1,17 @@
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+
+<h3>MOCK 设置代理函数,使用场景: 用自定义函数代替函数行为 </h3>
+<p>有时候，需要让函数MOCK到一个代理函数，来完成动作。</p>
+<div>
+  <pre>ON_CALL(_mock,addtest)<br>            .WillByDefault(<font color="blue">my_addtest_a</font>);
+
+EXPECT_CALL(_mock,addtest)<br>            .WillOnce(<font color="blue">Invoke(my_addtest_b)</font>);</pre>
+</div>
+<div>可以使用Invoke(delegate_fuction)来调用代理函数，Invoke也可以不加。注意delegate_fuction的申明需要和MOCK函数一致。本例中，既和addtest的申明一致.</div>
+
+<p>引用：<br />  
+  https://github.com/google/googletest/blob/master/googlemock/docs/cook_book.md#delegating-calls-to-a-fake-delegatingtofake</p>
+  </body>
+</html>

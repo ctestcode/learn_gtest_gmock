@@ -1,0 +1,22 @@
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+
+<h3>如何写一个匹配函数</h3>
+<p>提醒：请确保Matcher的功能是单一的，没有任何副作用，比如，不要去改变指针参数的值。
+<p> 定义MATCHER* 的语法如下 </p>
+<div>
+  <pre><b><font color="blue"> MATCHER</font>(name, description_string_expression) { statements; }</b></pre>
+</div>
+<p>定义了一个名字为name的匹配函数，会执行<em>statement</em>逻辑。匹配函数必须返回bool来表示匹配是否成功。statement范围里可以使用arg(参数)和 arg_type(参数类型)。</p>
+<p> <em>description string</em> 是注释，用来描述这个匹配的作用, 匹配失败的时候也输出这个信息，描述信息可以是空(&quot;&quot;)</p>
+
+<p>For example:</p>
+<div>
+	<pre><b><font color="blue"> MATCHER</font>(IsDivisibleBy7, &quot;&quot;) { return (arg % 7) == 0; }</b></pre>
+</div>
+
+<p></p>
+https://github.com/google/googletest/blob/master/googlemock/docs/cook_book.md#writing-new-matchers-quickly-newmatchers
+</body>
+</html>

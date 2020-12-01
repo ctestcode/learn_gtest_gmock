@@ -1,0 +1,8 @@
+EXPECT_CALL  ==> 学习 EXPECT_CALL 方法  
+EXPECT_CALL(	==>	调用EXPECT_CALL宏
+getLevel(100   ==>  设置期望 getLevel 被调用时，入参为100,0
+WillOnce    ==>.WillOnce是动作关键字, 期望 发生了一次时的函数的动作
+.WillOnce(Return(HIGH_LEVEL))  ==> 设置期望发生了一次时的动作，getLevel函数会返回 HIGH_LEVEL
+EXPECT_EQ  ==>  验证   printValue 返回值是 HIGH_LEVEL
+OK ==>2 测试成功
+OK ==>2 请进行练习，代码覆盖率达到100%

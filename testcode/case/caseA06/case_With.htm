@@ -1,0 +1,23 @@
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+
+<h3>With 匹配, 使用场景: 多个参数之间相互关联时，使用with链接匹配器，对多个参数值进行验证。</h3>
+<p>有时候单独比较一个参数并不满足需求。比如要求第一个参数比第二个参数大，就需要用到多参数匹配关键字With()</p>
+<div>
+  <pre>   EXPECT_CALL(_mock,add)<br>        .<font color="blue">With</font>(Gt());</pre>
+</div>
+<p>上述例子，对参数0 和参数1进行匹配，期待参数1大于参数 2。</p>
+<p>也可以使用AllArgs来表达。下列的例子和上面例子意义一样，但可读性更强。</p>
+<div>
+  <pre> EXPECT_CALL(_mock,addtest)<br>        .<font color="blue">With</font>(<font color="blue">AllArgs</font>(myGt()));;</pre>
+</div>
+<p>你可以使用Args&lt;k1, ..., kn&gt;(m) 选择参数去匹配.,例子如下：对MOCK addtest的参数0和参数1进行匹配</p>
+<div>
+  <pre>EXPECT_CALL(_mock,addtest)<br>        .<font color="blue">With</font>(<font color="blue">Args</font>&lt;0,1&gt;(myGt()));</pre>
+</div>
+<p>&nbsp;</p>
+<p>引用：<br />  
+  https://github.com/google/googletest/blob/master/googlemock/docs/cook_book.md#matching-multiple-arguments-as-a-whole</p>
+  </body>
+</html>

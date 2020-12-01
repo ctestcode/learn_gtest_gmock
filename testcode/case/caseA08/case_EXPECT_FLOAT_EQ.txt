@@ -1,0 +1,3 @@
+学习    ==>EXPECT_FLOAT_EQ  ,使用场景: 确认两个数值相等  
+EXPECT_FLOAT_EQ(  ==> 比较浮点数值
+EXPECT_NEAR(  ==> 浮点数值范围比较

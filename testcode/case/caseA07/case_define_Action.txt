@@ -1,0 +1,7 @@
+学习 ==> 学习Action 定义 使用场景：MOCK调用后执行自定义代码
+ACTION(MyAction)  ==> 定义  MyAction 动作
+(ABC*)(arg0) ==> Action里可以处理参数 例如arg0代表参数0
+ACTION_P(MyAction1,n)  ==>定义带额外参数n的 动作
+MyAction1(10)==> MyAction1调用时，可以带参数n
+
+

@@ -1,0 +1,6 @@
+学习    ==>EXPECT_DEATH  ,使用场景: 检验程序的退出码，退出信号，退出时打印的字符串
+EXPECT_DEATH( ==>期待 执行的代码会导致程序死机)
+stderr     ==>通过 stderr 输出错误信息 
+(p[0]=='T')   ==>p 为NULL,此处会造成内存错误
+EXPECT_EXIT(   ==> 验证程序退出时的错误码
+ExitedWithCode( ==> 设置程序退出的错误码为456

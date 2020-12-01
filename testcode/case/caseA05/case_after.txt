@@ -1,0 +1,4 @@
+After==>学习After的用法。
+Expectation ==>EXPECT_CALL 返回的类型为Expectation 
+.After==>  设置期待，Cleanup在getLevel和PrintLevel 之后被调用
+OK==>2 运行结果

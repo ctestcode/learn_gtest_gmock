@@ -1,0 +1,20 @@
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+
+<h3><font color="blue"> RetiresOnSaturation </font>方法</h3>
+<p>期望不去终止的话，会一直存在。<font color="blue">RetiresOnSaturation</font> 可以终止已设置的期望，和<font color="blue">InSequence</font>配合使用就可以完全控制期望的顺序。</p>
+<br />
+<blockquote> <font color="blue">InSequence</font> seq;<br>
+EXPECT_CALL(_mock,getLevel)<br>
+.WillOnce(Return(2))<br>
+<font color="blue">.RetiresOnSaturation</font>();<br>
+EXPECT_CALL(_mock,getLevel)<br>
+.WillOnce(Return(3))<br>
+.<font color="blue">RetiresOnSaturation</font>();<br>
+GetPrintReturn(2);</blockquote>
+
+<p>&nbsp;</p>
+</body>
+</html>
+  

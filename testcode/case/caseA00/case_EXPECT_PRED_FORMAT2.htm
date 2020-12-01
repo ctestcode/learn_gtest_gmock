@@ -1,0 +1,46 @@
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+
+
+<h3>EXPECT_PRED_FORMAT2 使用场景: 错误时，完全自定义错误消息</h3> 
+如果你对(ASSERT|EXPECT)_PRED*?and?(ASSERT|EXPECT)_(TRUE|FALSE) 输出格式不满意, 你可以自定义输出的消息格式 
+<table border="1" cellpadding="5" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Fatal assertion</th>
+      <th>Nonfatal assertion</th>
+      <th>Verifies</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ASSERT_PRED_FORMAT1(pred_format1, val1);</td>
+      <td>EXPECT_PRED_FORMAT1(pred_format1, val1);</td>
+      <td>pred_format1(val1)?is successful</td>
+    </tr>
+    <tr>
+      <td>ASSERT_PRED_FORMAT2(pred_format2, val1, val2);</td>
+      <td>EXPECT_PRED_FORMAT2(pred_format2, val1, val2);</td>
+      <td>pred_format2(val1, val2)?is successful</td>
+    </tr>
+    <tr>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+  </tbody>
+</table>
+<div>
+  <pre>AssertionResult PredicateFormattern(const char* expr1,
+                                    const char* expr2,
+                                    const char* exprn,
+                                    T1 val1,   
+                                    T2 val2,
+                                    Tn valn);</pre>
+</div>
+<br />
+引用<br />
+https://github.com/google/googletest/blob/master/googletest/docs/advanced.md#using-a-predicate-formatter
+</body>
+</html>

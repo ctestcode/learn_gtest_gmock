@@ -1,0 +1,41 @@
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+
+<h3>字符串比较</h3>
+<table border="1" cellpadding="5" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Fatal assertion</th>
+      <th>Nonfatal assertion</th>
+      <th>Verifies</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ASSERT_STREQ(str1,str2);</td>
+      <td>EXPECT_STREQ(str1,str2);</td>
+      <td>the two C strings have the same content</td>
+    </tr>
+    <tr>
+      <td>ASSERT_STRNE(str1,str2);</td>
+      <td>EXPECT_STRNE(str1,str2);</td>
+      <td>the two C strings have different contents</td>
+    </tr>
+    <tr>
+      <td>ASSERT_STRCASEEQ(str1,str2);</td>
+      <td>EXPECT_STRCASEEQ(str1,str2);</td>
+      <td>the two C strings have the same content, ignoring case</td>
+    </tr>
+    <tr>
+      <td>ASSERT_STRCASENE(str1,str2);</td>
+      <td>EXPECT_STRCASENE(str1,str2);</td>
+      <td>the two C strings have different contents, ignoring case</td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<p>引用<br />
+https://github.com/google/googletest/blob/master/googletest/docs/primer.md#string-comparison</p>
+</body>
+</html>

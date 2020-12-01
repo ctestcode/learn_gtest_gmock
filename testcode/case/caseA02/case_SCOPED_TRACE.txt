@@ -1,0 +1,3 @@
+SCOPED_TRACE==> SCOPED_TRACE 使用场景：判断失败时，显示帮助信息，包括文件和行号
+SCOPED_TRACE( ==> 在 SubFunction 子函数中添加补充信息
+TEST: SubFunction ==>2  错误时，输出的信息，包含文件和行号

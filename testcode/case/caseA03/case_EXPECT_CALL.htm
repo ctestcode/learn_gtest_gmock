@@ -1,0 +1,27 @@
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+<pre><span class="pl-en">
+<strong>1.设置期望 {#ExpectCall}</strong>
+<strong><font color="blue">
+EXPECT_CALL</font></strong></span>(mock-object, method (matchers)?)
+     .<strong>With</strong>(multi-argument-matcher)  ?
+     .<strong>Times</strong>(cardinality)            ?
+     .<strong>InSequence</strong>(sequences)         *
+     .<strong>After</strong>(expectations)           *
+     .<strong>WillOnce</strong>(action)              *
+     .<strong>WillRepeatedly</strong>(action)        ?
+     .<strong>RetiresOnSaturation</strong>();        ?</pre>
+<p>表格中<strong><code>?</code></strong> 表示最多被调用一次, <strong><code>*</code></strong>表示可以使用任意次.</p>
+<p id="autoid-7-1-0">2.<strong>Matchers</strong> 设置匹配器，匹配我们期待什么参数？<br />
+3. <strong>cardinality</strong> 设置基数，MOCK会被调用多少次？<br />
+4.<strong>Action</strong> 设置动作，应该怎么办？<br />
+5.<strong>sequences</strong> <strong>expectations</strong>设置发生的顺序</p>
+<p>引用<br />
+  https://github.com/google/googletest/blob/master/googlemock/docs/cheat_sheet.md#setting-expectations-expectcall<br />
+</p>
+<p><br />
+</p>
+<p>&nbsp;</p>
+</body>
+</html>

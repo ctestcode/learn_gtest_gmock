@@ -1,0 +1,6 @@
+Sequence==>学习Sequence的用法。
+Sequence s1==> 申明 s1 序列顺序。
+InSequence(s1)  ==> 设置getLevel 在s1 序列里
+.InSequence(s1,s2) ==> 设置PrintLevel 在s1 序列里，既在  getLevel  之后
+Cleanup==>同理得，Cleanup和 PrintLevel都在序列s2, 期望PrintLevel 在Cleanup之前被调用
+OK==>2  运行并验证结果。

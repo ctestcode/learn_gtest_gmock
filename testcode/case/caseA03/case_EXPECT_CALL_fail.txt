@@ -1,0 +1,14 @@
+EXPECT_CALL  ==> 学习 EXPECT_CALL 方法  
+EXPECT_CALL(	==>	调用EXPECT_CALL宏
+getLevel(100)   ==>  设置期待 getLevel 第一次被调用时，入参为100 
+.WillOnce(Return(HIGH_LEVEL))  ==> 当第一次入参是100时,getLevel 会返回 HIGH_LEVEL
+EXPECT_EQ  ==>  验证   printValue入参是50时，返回值是 HIGH_LEVEL
+FAILED ==>2 FAILED时的日志解析
+Function call: getLevel(50 ==>2运行实际情况，getLevel入参为50 ，不符合期望，MOCK函数默认会返回0 
+Expected arg #0: is equal to 100    ==>2    期望第一个入参为100
+Actual: 50  ==>2        实际第一个入参为50
+to be called once   ==>2 期望getLevel(100,0) 被调用一次
+never called   ==>2  实际没有被调用过
+case_EXPECT_CALL_fail.c:11: Failure  ==>2    第13行 EXPECT_EQ 验证失败
+case_EXPECT_CALL_fail.c:9: Failure  ==>2    第10行 EXPECT_CALL期望与实际运行不符合。
+FAILED  ==>2所以HelloGmock.case_EXPECT_CALL 测试失败

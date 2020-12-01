@@ -1,0 +1,11 @@
+With ==> With关键字, 使用场景:多个参数之间相互关联时，使用with链接匹配器，对多个参数值进行验证。
+myGt ==>定义 myGt匹配器，通过std::tuple<int, float> 来接受多个参数
+std::get<0>(arg) ==> get<0>(arg) 是获得第一个参数
+std::get<1>(arg) ==> get<1>(arg) 获得第二个参数
+int myGTFunction(const std::tuple<int, float> arg)==>自定义函数匹配器，效果和myGt一样,入参为 tuple的模板参数，来接受多个参数
+With(Gt())==> 使用gmock内建匹配器Gt, With用来连接匹配器，对所有参数 进行匹配验证
+With(Args<0,1>(myGt()))  ==>链接自定义匹配器, 对参数0和参数1进行匹配验证
+With(AllArgs(myGt()))  ==> 对所有的参数进行匹配验证， 和 With效果一样。With(AllArgs ,增加了可读效果。
+With(Args<0,1>( Truly(myGTFunction)))==>用自定义函数进行匹配。 函数的入参，必须是tuple 模板。
+
+

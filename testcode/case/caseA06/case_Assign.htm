@@ -1,0 +1,46 @@
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+
+<h3>动作-副作用</h3>
+<p>动作是Mock函数调用后的动作。</p>
+<table>
+  <thead>
+    <tr>
+      <th align="left"></th>
+      <th align="left"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+		
+      <td align="left"><font color="blue">Assign</font>(&amp;variable, value)</td>
+      <td align="left">Assign value to variable.</td>
+		
+    </tr>
+  </tbody>
+</table>
+<p>Assign关键字可以在MOCK结束后，改变变量的值。</p>
+<p>下面的例子的作用是，期待addtest被调用后，把局部变量value的值设置成2.</p>
+<table>
+  <thead>
+    <tr>
+      <th align="left"></th>
+      <th align="left"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">int value;<br>
+        EXPECT_CALL(_mock,addtest)<br>
+.WillOnce(DoAll(<font color="blue">Assign</font>(&amp;value,2),Return(0)));</td>
+      
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>引用：<br />  
+  https://github.com/google/googletest/blob/master/googlemock/docs/cheat_sheet.md#side-effects</p>
+  </body>
+</html>

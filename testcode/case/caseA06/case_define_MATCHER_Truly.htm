@@ -1,0 +1,31 @@
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+
+<h3>Truly, 使用函数作为MATCHER
+</h3>
+<table>
+  <thead>
+    <tr>
+      <th align="left">Matcher</th>
+      <th align="left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">Truly(predicate)</td>
+      <td align="left">predicate(argument) 返回值可以通过if 判定为 true,  predicate 可以是函数或伪函数 .</td>
+    </tr>
+  </tbody>
+</table>
+<p>gMock 提供了一系列内建的 匹配器. 当你有自己的算法函数时，只要函数参数类型符合，可就以使用自己的函数作为算法匹配器. 举例：</p>
+<div>
+  <pre>int IsEven(int n) <br>{ <br>    return (n % 2) == 0 ? 1 : 0;<br>}
+
+EXPECT_THAT(ret, Truly(IsEven))</pre></div>
+<p>提示：自定义的函数不必返回bool类型，只要可以使用这样判定就可以被使用 if (condition) ....</p>
+
+<p>引用：<br />  
+  https://github.com/google/googletest/blob/master/googlemock/docs/cheat_sheet.md#adapters-for-matchers</p>
+  </body>
+</html>

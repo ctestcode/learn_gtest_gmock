@@ -1,0 +1,18 @@
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+
+<h3>设置期待的顺序 <strong><font color="blue">InSequence</font></strong></h3>
+<p><strong>InSequence</strong> 还有另外一种更简便的表达方式。 </p>
+<p>以下代码声明了<strong>InSequence</strong>类型的变量seq，在seq变量作用域里，所有的期待getLevel PrintLevel Cleanup ，必须按照严格的顺序发生。  </p>
+<br />
+<blockquote>  <strong><font color="blue">InSequence</font></strong> seq;<br />
+EXPECT_CALL(_mock,getLevel)<br />
+.WillOnce(Return(0));<br />
+EXPECT_CALL(_mock,PrintLevel);<br />
+GetPrintReturn(1);</blockquote>
+
+<p>&nbsp;</p>
+</body>
+</html>
+  

@@ -1,0 +1,14 @@
+ON_CALL  ==> 学习 ON_CALL WillByDefault方法
+TEST_F	==>	当使用Mock时，需要使用TEST_F 来定义测试用例
+HelloGmock ==>	MOCK类名（由工具自动生成）,本教学工具中 所有的被调用函数 都已经被MOCK
+ON_CALL(	==>	调用ON_CALL宏
+_mock   ==> _mock是单元测试框架内建的mock
+getLevel(0     ==>  设置调用 getLevel(0,0)的默认动作
+WillByDefault(   ==> WillByDefault是关键字设置默认动作
+Return(ZERO_LEVEL)  ==> Return是动作关键字，函数默认动作会返回ZERO_LEVEL
+getLevel(100   ==>  设置调用 getLevel(100,0)的默认动作
+Return(HIGH_LEVEL) ==> 函数默认会返回 HIGH_LEVEL
+EXPECT_EQ(HIGH_LEVEL ==>  验证   printValue入参是100时，返回值是 HIGH_LEVEL
+case_ON_CALL_default)  ==> MOCK创建后，系统也提供了返回值类型的空值,例如int为0,string为"",指针为NULL
+EXPECT_EQ(0  ==>  没有写ON_CALL时，getLevel的MOCK会返回默认值0，验证返回值为0成功
+printf("LOW_LEVEL ==>1    	练习:添加测试代码，测试 LOW_LEVEL 的分支

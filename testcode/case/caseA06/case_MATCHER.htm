@@ -1,0 +1,111 @@
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+
+<h4>一般匹配函数</h4>
+<table border="0" cellpadding="2" cellspacing="0">
+  <thead>
+    <tr>
+      <th width="110" align="left">Matcher</th>
+      <th align="left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">Eq(value)<br /> 
+      or value</td>
+      <td align="left">argument == value</td>
+    </tr>
+    <tr>
+      <td align="left">Ge(value)</td>
+      <td align="left">argument &gt;= value</td>
+    </tr>
+    <tr>
+      <td align="left">Gt(value)</td>
+      <td align="left">argument &gt; value</td>
+    </tr>
+    <tr>
+      <td align="left">Le(value)</td>
+      <td align="left">argument &lt;= value</td>
+    </tr>
+    <tr>
+      <td align="left">Lt(value)</td>
+      <td align="left">argument &lt; value</td>
+    </tr>
+    <tr>
+      <td align="left">Ne(value)</td>
+      <td align="left">argument != value</td>
+    </tr>
+    <tr>
+      <td align="left">IsFalse()</td>
+      <td align="left">argument evaluates to false in a Boolean context.</td>
+    </tr>
+    <tr>
+      <td align="left">IsTrue()</td>
+      <td align="left">argument evaluates to true in a Boolean context.</td>
+    </tr>
+    <tr>
+      <td align="left">IsNull()</td>
+      <td align="left">argument is a NULL pointer (raw or smart).</td>
+    </tr>
+    <tr>
+      <td align="left">NotNull()</td>
+      <td align="left">argument is a non-null pointer (raw or smart).</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<p>&nbsp;</p>
+<table>
+  <thead>
+    <tr>
+      <th align="left">Matcher</th>
+      <th align="left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">ContainsRegex(string)</td>
+      <td align="left">argument matches the given regular expression.</td>
+    </tr>
+    <tr>
+      <td align="left">EndsWith(suffix)</td>
+      <td align="left">argument ends with string suffix.</td>
+    </tr>
+    <tr>
+      <td align="left">HasSubstr(string)</td>
+      <td align="left">argument contains string as a sub-string.</td>
+    </tr>
+    <tr>
+      <td align="left">MatchesRegex(string)</td>
+      <td align="left">argument matches the given regular expression with the match starting at the first character and ending at the last character.</td>
+    </tr>
+    <tr>
+      <td align="left">StartsWith(prefix)</td>
+      <td align="left">argument starts with string prefix.</td>
+    </tr>
+    <tr>
+      <td align="left">StrCaseEq(string)</td>
+      <td align="left">argument is equal to string, ignoring case.</td>
+    </tr>
+    <tr>
+      <td align="left">StrCaseNe(string)</td>
+      <td align="left">argument is not equal to string, ignoring case.</td>
+    </tr>
+    <tr>
+      <td align="left">StrEq(string)</td>
+      <td align="left">argument is equal to string.</td>
+    </tr>
+    <tr>
+      <td align="left">StrNe(string)</td>
+      <td align="left">argument is not equal to string.</td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+
+
+https://github.com/google/googletest/blob/master/googlemock/docs/cheat_sheet.md#generic-comparison
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+
+<style type="text/css">
+<!--
+.STYLE1 {
+	color: #0000FF;
+	font-weight: bold;
+}
+.STYLE3 {color: #FF0000}
+-->
+</style>
+<p><strong><font color="blue">ON_CALL </font></strong>宏使用方法如下 <br />
+通过WillByDefault来设置Mock函数的默认动作.</p>
+<table border="1" cellspacing="0" bordercolor="#660033">
+  
+  <tr>
+    <td><div>
+        <div><strong><font color="blue">ON_CALL</font></strong>(mock_object, method(<font color="red">matchers</font>))</div>
+        <div>    .<strong>With</strong>(<font color="red">multi_argument_matcher</font>)  ?</div>
+        <div>    .<strong>WillByDefault</strong>(<font color="red">action</font>);</div>
+    </div></td>
+  </tr>
+</table>
+<p>mock_obect: 用户定义的mock类，UT自动工具生成的代码里，是_mock<br />
+matchers :匹配器:cmj_todo<br />
+multi_argument_matcher:	<br />
+action:	Mock的动作</p>
+<p>&nbsp;</p>
+<p>引用<br />
+https://github.com/google/googletest/blob/master/googlemock/docs/cheat_sheet.md#setting-default-actions-oncall</p>
+<p>&nbsp;	</p>
+<p>&nbsp;</p>
+</body>
+</html>

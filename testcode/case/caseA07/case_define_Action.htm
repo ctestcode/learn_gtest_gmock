@@ -1,0 +1,31 @@
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+<h3>自定义 Actions</h3>
+<table>
+  <thead>
+    <tr>
+      <th align="left"></th>
+      <th align="left"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">ACTION(Sum) { return arg0 + arg1; }</td>
+      <td align="left">定义一个动作Sum() 返回Mock函数的参数1和参数2 之和.</td>
+    </tr>
+    <tr>
+      <td align="left">ACTION_P(Plus, n) { return arg0 + n; }</td>
+      <td align="left">Defines an action Plus(n) to return the sum of the mock function's argument #0 and n.</td>
+    </tr>
+    <tr>
+      <td align="left">ACTION_Pk(Foo, p1, ..., pk) { statements; }</td>
+      <td align="left">Defines a parameterized action Foo(p1, ..., pk) to execute the given statements.</td>
+    </tr>
+  </tbody>
+</table>
+<p>The ACTION* 宏 不能再函数体里使用。</p>
+<p>引用：<br />  
+  https://github.com/google/googletest/blob/master/googlemock/docs/cheat_sheet.md#defining-actions</p>
+  </body>
+</html>

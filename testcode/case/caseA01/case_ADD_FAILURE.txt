@@ -1,0 +1,3 @@
+ADD_FAILURE    ==>ADD_FAILURE   ,使用场景: 显示地申明错误
+SUCCEED()      ==> 显示地申明成功
+ADD_FAILURE()  ==> 显示地申明错误

@@ -1,0 +1,17 @@
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+
+<h3>MOCK参数任意匹配</h3>
+<p>有时候，我们不关心函数入参的值，可以使用 _ 表示任意参数</p>
+<div>
+  <pre>EXPECT_CALL(_mock,<font color="blue">getLevel(_,1)</font>)<br>		.WillOnce(Return(LOW_LEVEL));</pre>
+</div>
+<p>如果你对所有的参数都不关系，则参数列表也可以不用输入 </p>
+<div>
+  <pre>ON_CALL(_mock,<font color="blue">getLevel</font>)<br>		.WillByDefault(Return(ZERO_LEVEL));</pre></div>
+<p>&nbsp;</p>
+<p>引用:<br />
+https://github.com/google/googletest/blob/master/googlemock/docs/for_dummies.md#matchers-what-arguments-do-we-expect</p>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - app_total.info - case/caseA01.c</title>
+  <style type="text/css">
+<!--
+.STYLE3 {color: #284FA8}
+/* Source code view: line number format */
+-->
+  </style>
+</head>
+
+<body>
+
+  <p><strong>代码覆盖</strong>（英语：<strong>Code coverage</strong>）是软件测试中的一种度量，描述程序中源代码被测试的比例和程度，所得比例称为<strong>代码覆盖率</strong>。</p>
+  <br>
+  <table width="46%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title"><strong>LCOV - code coverage report</strong></td>
+    </tr>
+    <tr><td bgcolor="#CAD7FE" class="ruler"><img src="glass.png" width=3 height=3 alt=""></td>
+    </tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="63%">
+          <tr>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead ">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem"><strong>Lines:</strong></td>
+            <td bgcolor="#CAD7FE" class="STYLE3 headerCovTableEntry"><strong>3</strong></td>
+            <td bgcolor="#CAD7FE" class="STYLE3 headerCovTableEntry"><strong>8</strong></td>
+            <td bgcolor="#FF0000" class="headerCovTableEntryLo"><strong>37.5 %</strong></td>
+          </tr>
+          <tr>
+            <td class="headerItem"><strong>Functions:</strong></td>
+            <td bgcolor="#CAD7FE" class="STYLE3 headerCovTableEntry"><strong>1</strong></td>
+            <td bgcolor="#CAD7FE" class="STYLE3 headerCovTableEntry"><strong>1</strong></td>
+            <td bgcolor="#A7FC9D" class="headerCovTableEntryHi"><strong>100.0 %</strong></td>
+          </tr>
+          <tr>
+            <td class="headerItem"><strong>Branches:</strong></td>
+            <td bgcolor="#CAD7FE" class="STYLE3 headerCovTableEntry"><strong>1</strong></td>
+            <td bgcolor="#CAD7FE" class="STYLE3 headerCovTableEntry"><strong>6</strong></td>
+            <td bgcolor="#FF0000" class="headerCovTableEntryLo"><strong>16.7 %</strong></td>
+          </tr>
+          <tr><td><img src="glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td bgcolor="#CAD7FE" class="ruler"><img src="glass.png" width=3 height=3 alt=""></td>
+    </tr>
+</table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">           Branch data     Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum"  style="background-color:#FFEA20">       1 </span>                :            : //源代码caseA01.c</a>
+<span class="lineNum" style="background-color:#FFEA20">       2 </span>                :<span class="lineCov" style="background-color:#CAD7FE">          2 : int compare(unsigned int a,unsigned int b)</span>
+<span class="lineNum" style="background-color:#FFEA20">       3 </span>                :            : { 
+<span class="lineNum" style="background-color:#FFEA20">       4 </span>        [<span class="branchCov" title="Branch 0 was taken 2 times" style="background-color:#CAD7FE"> + </span><span class="branchNoCov" title="Branch 1 was not taken" style="background-color:#FF6230"> - </span>]:<span class="lineCov" style="background-color:#CAD7FE">          2 :    if (a-b&gt;0)</span>
+<span class="lineNum" style="background-color:#FFEA20">       5 </span>                :            :    {
+<span class="lineNum" style="background-color:#FFEA20">       6 </span>                :<span class="lineCov" style="background-color:#CAD7FE">          2 :     return 1;</span>
+<span class="lineNum" style="background-color:#FFEA20" >       7 </span>        [<span class="branchNoExec" title="Branch 0 was not executed" style="background-color:#FF6230"> # </span><span class="branchNoExec " title="Branch 1 was not executed" style="background-color:#FF6230"> # </span>]:<span class="lineNoCov" style="background-color:#FF6230">          0 :    }if( a==b)</span>
+<span class="lineNum" style="background-color:#FFEA20">       8 </span>                :            :    {
+<span class="lineNum" style="background-color:#FFEA20">       9 </span>                :<span class="lineNoCov" style="background-color:#FF6230">          0 :        return 0;</span>
+<span class="lineNum" style="background-color:#FFEA20">      10 </span>        [<span class="branchNoExec" title="Branch 0 was not executed" style="background-color:#FF6230"> # </span><span class="branchNoExec" title="Branch 1 was not executed" style="background-color:#FF6230"> # </span>]:<span class="lineNoCov" style="background-color:#FF6230">          0 :    }if ( a&lt;b)</span>
+<span class="lineNum" style="background-color:#FFEA20">      11 </span>                :            :    {
+<span class="lineNum" style="background-color:#FFEA20">      12 </span>                :<span class="lineNoCov" style="background-color:#FF6230">          0 :        return -1;</span>
+<span class="lineNum" style="background-color:#FFEA20">      13 </span>                :            :    }
+<span class="lineNum" style="background-color:#FFEA20">      14 </span>                :<span class="lineNoCov" style="background-color:#FF6230">          0 : }</span>
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td bgcolor="#CAD7FE" class="ruler"><img src="glass.png" width=3 height=3 alt=""></td></tr>
+    <tr>
+      <td class="versionInfo">&nbsp;</td>
+    </tr>
+  </table>
+  <br>
+
+</body>
+</html>

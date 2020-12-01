@@ -1,0 +1,48 @@
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+<h3>浮点数比较 </h3>
+<p>浮点数比较特殊，必须使用浮点数宏进行比较</p>
+<table border="1" cellpadding="5" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Fatal assertion</th>
+      <th>Nonfatal assertion</th>
+      <th>Verifies</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ASSERT_FLOAT_EQ(val1, val2);</td>
+      <td>EXPECT_FLOAT_EQ(val1, val2);</td>
+      <td>the two float values are almost equal</td>
+    </tr>
+    <tr>
+      <td>ASSERT_DOUBLE_EQ(val1, val2);</td>
+      <td>EXPECT_DOUBLE_EQ(val1, val2);</td>
+      <td>the two double values are almost equal</td>
+    </tr>
+  </tbody>
+</table>
+<p>下面的宏，可以进行浮点数范围比较</p>
+<table border="1" cellpadding="5" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Fatal assertion</th>
+      <th>Nonfatal assertion</th>
+      <th>Verifies</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ASSERT_NEAR(val1, val2, abs_error);</td>
+      <td>EXPECT_NEAR(val1, val2, abs_error);</td>
+      <td>the difference between val1 and val2 doesn't exceed the given absolute error</td>
+    </tr>
+  </tbody>
+</table>
+<h4>&nbsp;</h4>
+<p>引用<br />
+https://github.com/google/googletest/blob/master/googletest/docs/advanced.md#floating-point-macros</p>
+</body>
+</html>

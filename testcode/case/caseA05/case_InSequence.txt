@@ -1,0 +1,4 @@
+InSequence==>学习InSequence的用法。
+InSequence seq==> 声明了InSequence类型的变量seq
+InSequence(s1)  ==> 在seq变量作用域里，所有的期待getLevel PrintLevel Cleanup
+OK==>2  运行并验证结果。

@@ -1,0 +1,8 @@
+RetiresOnSaturation==>学习RetiresOnSaturation的用法。
+OK==>2 运行结果
+case_RetiresOnSaturation==> 第一个例子 演示，没有InSequence时，序列期望的结果。
+Loop [0],ret[3]==>2  新的期望总是会覆盖旧的期望。所以getLevel 会先返回3.
+.WillOnce(Return(3))==> 对应此处代码
+Loop [1],ret[2]==>2   之后getLevel 再先返回2.
+RetiresOnSaturation_sequence ==>第二个例子演示了 申明了InSequence的效果。
+case_RetiresOnSaturation_sequence==>2所以第二个例子里getLevel 会先返回2,和代码写的顺序一致。

@@ -1,0 +1,41 @@
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+<h3>SetArgPointee 动作,使用场景: 设置指针参数的值或结构数据</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th width="191" align="left"></th>
+      <th width="488" align="left"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left"><font color="blue">SetArgPointee</font>&lt;N&gt;(value)</td>
+      <td align="left">Assign value to the variable pointed by the N-th (0-based) argument.</td>
+    </tr>
+  </tbody>
+</table>
+<p>SaveArgPointee关键字可以在MOCK结束后，保存指针参数的值。</p>
+<p>下面的例子的作用是，期待CheckABC被调用后，把456保存在第二个指针参数里。</p>
+<table>
+  <thead>
+    <tr>
+      <th align="left"></th>
+      <th align="left"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left"> EXPECT_CALL(_mock,CheckABC)<br>
+.WillOnce(DoAll(<font color="blue">SetArgPointee</font>&lt;1&gt;(456),Return(0)));</td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<p>引用：<br />  
+  https://github.com/google/googletest/blob/master/googlemock/docs/cheat_sheet.md#side-effects </p>
+  
+  </body>
+</html>

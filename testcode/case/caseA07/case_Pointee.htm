@@ -1,0 +1,25 @@
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+<h3>Pointee指针匹配, 使用场景:验证指针变量所指的值</h3>
+<p>C/C++ 函数经常使用指针作为参数. 你可以使用 IsNull(), NotNull(), 和其他内置匹配函数去匹配指针参数。但是你想确认指针所指的值的话，则需要使用Pointee(m) matcher.</p>
+<p>Pointee(m) 会把指针所指的值和m 进行比较，如果符合匹配 的条件，则匹配成功. 举例:</p>
+<div>
+  <pre>EXPECT_CALL(_mock,CheckABC(_,<font color="blue">Pointee</font>(123)));</pre>
+</div>
+<p>上面的例子表述，期待CheckABC第二个指针参数所指的值为123.</p>
+<p> Pointee() 有一个特点，如果指针为NULL 时，会匹配失败，所以你不必用成下面的样子</p>
+<div>
+  <pre> AllOf(NotNull(), Pointee(m))</pre>
+</div>
+<p>有了这个特性，你不必担心遇到NULL的时候，测试程序崩溃。</p>
+
+<p>如果遇到指针的指针的参数，应该如何匹配？可以写成下面的形式。Pointee可以嵌套使用，来匹配高阶的指针</p>
+<div>
+	<pre>Pointee(Pointee(123))</pre>
+</div>
+<p>&nbsp;</p>
+<p>引用：<br />  
+  https://github.com/google/googletest/blob/master/googlemock/docs/cook_book.md#validating-the-value-pointed-to-by-a-pointer-argument</p>
+  </body>
+</html>

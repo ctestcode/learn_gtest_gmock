@@ -1,0 +1,36 @@
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+
+<h3>SaveArg 动作，使用场景: 保存MOCK函数参数的值到局部变量</h3>
+<table width="597">
+  <tbody>
+    <tr>
+      <td width="152" align="left"><font color="blue">SaveArg</font>&lt;N&gt;(pointer)</td>
+      <td width="433" align="left">Save the N-th (0-based) argument to *pointer.</td>
+    </tr>
+  </tbody>
+</table>
+<p>SaveArg关键字可以在MOCK结束后，保存参数的值。</p>
+<p>下面的例子的作用是，期待addtest被调用后，把参数1和参数2保存在变量里。</p>
+<table>
+  <thead>
+    <tr>
+      <th align="left"></th>
+      <th align="left"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left">int a;<br>
+float b2=0;<br>
+EXPECT_CALL(_mock,addtest)<br>
+.WillOnce(DoAll(<font color="blue">SaveArg</font>&lt;0&gt;(&amp;a),SaveArg&lt;1&gt;(&amp;b2),Return(0)));</td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<p>引用：<br />  
+  https://github.com/google/googletest/blob/master/googlemock/docs/cheat_sheet.md#side-effects</p>
+  </body>
+</html>

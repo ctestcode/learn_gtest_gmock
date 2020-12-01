@@ -1,0 +1,7 @@
+MATCHER ==> 使用匹配器 使用场景：使用gmock内置匹配器，对单个参数值进行验证(如函数参数值）
+Gt(5)==>  使用Gt匹配器，验证 整形参数值大于5
+FloatEq(3) ==>使用FloatEq匹配器 ，验证浮点型参数值等于3
+NotNull() ==> 使用NotNull匹配器，验证 指针参数不等于NULl
+Ne(5) ==>使用Ne匹配器，验证 整形参数值不等于5
+FloatNear==> 使用FloatNear匹配器，验证浮点型参数值在 3的 (-0.5,+0.5)的范围内
+StartsWith("abc") ==>使用StartsWith匹配器,验证 字符串，以abc开头

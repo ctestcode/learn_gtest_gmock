@@ -1,0 +1,18 @@
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+<h3>Field|AllOf|成员匹配，使用场景: 对struct结构体里的成员变量进行验证</h3>
+<p>有时候，MOCK函数的参数是一个结构的指针，当验证和匹配结构成员变量的时，不用把整个结构和一个固定的结构数据进行比较。可以使用Field() 直接对结构的成员变量进行验证。</p>
+<div>
+	<pre><font color="blue"> Field </font>(&amp;Foo::bar, m)</pre>
+</div>
+<p>上面的例子是对结构Foo里的m成员变量 和Matcher m 进行匹配。</p><br>
+Field()还有一个形式，第一个参数可以是说明。当匹配错误时，会输出这个错误的消息，方便调试
+<div>
+  <pre><font color="blue">Field</font>("check bar",&amp;Foo::bar, m)</pre>
+</div>
+
+<p>引用：<br />  
+  https://github.com/google/googletest/blob/master/googlemock/docs/cook_book.md#validating-a-member-of-an-object</p>
+    </body>
+</html>

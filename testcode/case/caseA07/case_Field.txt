@@ -1,0 +1,8 @@
+Field==> Field关键字。使用场景: 对struct结构体里的成员变量进行验证
+m1= Field(&ABC::a, Eq(123))==> 对ABC结构的成员变量a,进行匹配,期待等于123。设置匹配器名为m1
+m2= Field(&ABC::b, FloatEq(2.1)) ==> 对ABC结构的成员变量b,进行匹配,期待等于2.1。设置匹配器名为m2
+m3= Field("check ABC::data",&ABC::data ==>   对ABC结构的成员变量data,进行匹配,期待等于"abc"。设置匹配器名为m3
+Field("check ABC::data"==>  Field()还有一个形式，第一个参数可以是说明。当匹配错误时，会输出这个错误的消息，方便调试 
+EXPECT_CALL(_mock,CheckABC(m1,_))==> 对CheckABC的第一个结构体参数，用m1匹配器进行匹配
+auto mall=AllOf(m1,m2,m3) ==> 通过Allof对多个匹配器进行组合。设置匹配器名为mall
+EXPECT_CALL(_mock,CheckABC(mall,_)) ==>对CheckABC的第一个结构体参数，用mall匹配器进行匹配

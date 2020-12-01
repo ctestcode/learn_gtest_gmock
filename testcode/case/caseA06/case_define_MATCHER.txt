@@ -1,0 +1,6 @@
+MATCHER( ==> 定义匹配算法。 使用场景:自定义匹配器。使用EXPECT_THAT调用匹配器，对单个值进行验证
+*result_listener<< ==>  result_listener是gtest内建变量，匹配失败时，会输出相应提示
+arg ==> 是匹配内建的需要进行匹配检查的参数
+MATCHER_P ==>  定义带参数的匹配算法
+IsEven()==> 调用 IsEven算法进行对函数第一个入参进行匹配
+IsDivisibleBy(5) ==>调用带参数的算法，对函数第一个入参进行匹配

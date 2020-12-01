@@ -1,0 +1,4 @@
+学习==>AssertionResult,使用场景: 错误时可以打印额外的消息
+AssertionResult  ==> 自定义函数返回类型必须为 AssertionResult
+AssertionFailure() ==>错误时输出额外的消息 
+EXPECT_TRUE ==> 调用  isGreaterThan10_result进行判定

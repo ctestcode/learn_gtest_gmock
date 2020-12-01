@@ -1,0 +1,39 @@
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+<h3>Times的基数</h3>
+<p>下面这些基数可以用在 Times() ，指定MOCK函数被调用的次数</p>
+<table border="1" cellpadding="5" cellspacing="0">
+  <tbody>
+    <tr>
+      <td width="187" align="left"><font color="blue">AnyNumber</font>()</td>
+      <td width="298" align="left"> MOCK可以被调用任意次数 </td>
+    </tr>
+    <tr>
+      <td align="left"><font color="blue">AtLeast</font>(n)</td>
+      <td align="left">MOCK最少被调用次数</td>
+    </tr>
+    <tr>
+      <td align="left"><font color="blue">At<font color="blue"></font>Most</font>(n)</td>
+      <td align="left">MOCK最多被调用次数</td>
+    </tr>
+    <tr>
+      <td align="left"><font color="blue">Between</font>(m, n)</td>
+      <td align="left">MOCK调用次数在m和n之间</td>
+    </tr>
+    <tr>
+      <td align="left"><font color="blue">Exactly</font>(n) or n</td>
+      <td align="left">MOCK被调用的 次数，如果是0,则期望不被调用.</td>
+    </tr>
+  </tbody>
+</table>
+<ul>
+  <li>如果WillOnce（）和WillRepeatedly（）都不在EXPECT_CALL(), 则基数是Times(1)。</li>
+  <li>如果有n个WillOnce()，但没有WillRepeatedly（），其中n&gt; = 1，基数是Times（n）</li>
+  <li>如果有n个WillOnce()和一个WillRepeatedly（），其中n&gt; = 0，基数是Times(AtLeast(n))。</li>
+</ul>
+<p>引用<br />
+https://github.com/google/googletest/blob/master/googlemock/docs/cheat_sheet.md#cardinalities-cardinalitylist</p>
+<p>&nbsp;</p>
+</body>
+</html>

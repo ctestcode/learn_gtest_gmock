@@ -1,0 +1,5 @@
+SaveArg ==>SaveArg 关键字。使用场景: 保存MOCK函数参数的值到局部变量。
+SaveArg<0>(&a)  ==>保存第一个参数到a
+SaveArg<1>(&b)  ==>保存第二个参数到b
+DoAll ==>注意 ，需要用DoAll 链接 SaveArg和Return动作。
+EXPECT_FLOAT_EQ(b ==>验证保存的参数是否正确

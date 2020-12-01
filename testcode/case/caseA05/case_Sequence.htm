@@ -1,0 +1,27 @@
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+<h3>设置期待的顺序 <strong><font color="blue">InSequence</font></strong></h3>
+<p>除了After,另外一种控制顺序的方法是 <strong>InSequence</strong></p>
+<br />
+<strong> InSequence 的使用方法</strong><br />
+以下代码设置期待,s1序列里有getLevel和PrintLevel,表示getLevel在PrintLevel之前调用。
+
+同理得,PrintLevel在Cleanup之前调用。
+
+<blockquote> <strong><font color="blue">  Sequence </font></strong>s1, s2;<br />
+EXPECT_CALL(_mock,getLevel)<br />
+<strong><font color="blue"> .InSequence</font></strong>(s1);<br />
+EXPECT_CALL(_mock,PrintLevel)<br />
+<strong><font color="blue">.InSequence</font></strong>(s1,s2);<br />
+EXPECT_CALL(_mock,Cleanup)<br />
+<strong><font color="blue">.InSequence</font></strong>(s2);<br />
+GetPrintReturn(1);</blockquote>
+
+<p>&nbsp;</p>
+
+
+https://github.com/google/googletest/blob/master/googlemock/docs/cheat_sheet.md#sequences-usingsequences
+  </body>
+</html>
+  

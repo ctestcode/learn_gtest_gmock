@@ -1,0 +1,6 @@
+学习 ==>学习 MOCK代理函数
+my_addtest ==>定义代理函数my_addtest ,申明必须和原函数 addtest一致
+ON_CALL ==>使用 ON_CALL 设置 addtest的代理函数
+EXPECT_CALL ==>使用 EXPECT_CALL 设置 addtest的代理函数
+Invoke ==> 加Invoke可以增加代码可读性，也可以不加。
+

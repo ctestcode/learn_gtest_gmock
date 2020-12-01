@@ -1,0 +1,39 @@
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+<h3>ReturnArg 动作 使用场景: 把函数的参数作为函数的返回值返回</h3>
+<table>
+  <thead>
+    <tr>
+      <th width="191" align="left"></th>
+      <th width="488" align="left"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left"><font color="blue">ReturnArg</font>&lt;N&gt;()</td>
+      <td align="left">Return the N-th (0-based) argument.</td>
+    </tr>
+  </tbody>
+</table>
+<p><font color="blue">ReturnArg</font>关键字可以在MOCK结束后，把第N个参数作为返回值返回</p>
+<p>下面的例子的作用是，期待addtest被调用后，把1个参数作为函数的返回值返回。</p>
+<table>
+  <thead>
+    <tr>
+      <th align="left"></th>
+      <th align="left"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="left"> EXPECT_CALL(_mock,addtest)<br>
+.WillOnce(<font color="blue">ReturnArg</font>&lt;1&gt;());</td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<p>引用：<br />  
+  https://github.com/google/googletest/blob/master/googlemock/docs/cheat_sheet.md#actions-actionlist</p>
+  </body>
+</html>

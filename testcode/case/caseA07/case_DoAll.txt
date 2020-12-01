@@ -1,0 +1,4 @@
+学习 ==> 学习 DoAll , 使用场景： 关联多个动作，简化代码
+case_DoAll_1 ==> 第一个case,展示了 DoAll的使用
+DoAll(at1,at2) ==> 也可以用DoAll 关联多个动作。
+

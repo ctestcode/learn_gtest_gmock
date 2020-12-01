@@ -1,0 +1,3 @@
+ReturnArg ==>动作，使用场景: 把函数的参数作为函数的返回值返回
+ReturnArg<1>==> 返回addtest的第二个参数的值，作为addtest的返回值，本例中，这个值为2
+EXPECT_EQ(2, ==>验证返回值为2

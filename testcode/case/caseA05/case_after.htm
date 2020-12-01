@@ -1,0 +1,38 @@
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+
+<style type="text/css">
+<!--
+.STYLE1 {color: #0000FF}
+.STYLE2 {color: blue}
+-->
+</style>
+<h3>设置期待的顺序 After</h3>
+<p>默认情况下，期待是没有顺序的。 可以通过2种方法设置顺序。先介绍After的使用方法。</p>
+<br />
+<strong> After 的使用方法</strong><br />
+以下代码设置期待,After在getLevel和PrintLevel之后运行。
+
+<blockquote>
+        <strong><font color="blue"> Expectation</font></strong> exp1,exp2;<br />
+          exp1=EXPECT_CALL(_mock, getLevel);<br />
+          exp2=EXPECT_CALL(_mock, PrintLevel);<br />
+          EXPECT_CALL(_mock, Cleanup())<br />
+     <strong><font color="blue">.After</font></strong>(exp1,exp2);</p>
+</blockquote>
+
+<p>也可以使用 ExpectationSet去收集期待。</p>
+
+  <blockquote>   <strong><font color="blue"> ExpectationSet </font></strong>all_exp;<br />
+      all_exp+=EXPECT_CALL(_mock, getLevel);<br />
+      all_exp+=EXPECT_CALL(_mock, PrintLevel);<br />
+      EXPECT_CALL(_mock, Cleanup())<br />
+      <strong><font color="blue">.After</font></strong>(all_exp);</p>
+</blockquote>
+
+
+https://github.com/google/googletest/blob/master/googlemock/docs/cheat_sheet.md#the-after-clause-afterclause
+
+</body>
+</html>

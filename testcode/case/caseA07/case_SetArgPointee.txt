@@ -1,0 +1,4 @@
+SetArgPointee ==>动作,使用场景: 设置指针参数的值或结构数据
+SetArgumentPointee<0>(abc)  ==>设置第一个指针参数的值为 abc结构数据。
+SetArgumentPointee<1>(456) ==> 设置第二个指针参数的值为 456
+EXPECT_EQ(value,456)==> 验证输出的返回值。

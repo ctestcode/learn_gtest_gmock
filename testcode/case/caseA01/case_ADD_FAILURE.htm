@@ -1,0 +1,21 @@
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+
+<h3>显示申明成功或失败</h3>
+<div>
+  <pre><font color= 'blue'>SUCCEED</font>();</pre>
+</div>
+<p>SUCCEED表示执行到当前位置时，状态是正确的。不会产生其他消息</p>
+<div>
+  <pre><font color="blue">FAIL</font>();  
+<font color="blue">ADD_FAILURE</font>();  
+<font color="blue">ADD_FAILURE_AT</font>(&quot;file_path&quot;, line_number);</pre>
+</div>
+<p>FAIL() 会触发致命错误，整个case会终止,  ADD_FAILURE() and ADD_FAILURE_AT() 只是触发一般错误，case不会终止</p>
+<p>注意: 你只能在返回值为void的函数里使用FAIL(). </p>
+<p><br />
+引用<br />
+https://github.com/google/googletest/blob/master/googletest/docs/advanced.md#explicit-success-and-failure</p>
+</body>
+</html>

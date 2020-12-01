@@ -1,0 +1,4 @@
+学习    ==>EXPECT_EQ  ,使用场景: 确认两个数值相等  
+compare(  ==> 调用 被测函数compare
+EXPECT_EQ(  ==> 验证 所期待的条件为 真
+OK  ==>运行成功

@@ -1,0 +1,5 @@
+Truely ==> Truely可以把函数当作匹配器来使用。使用场景，自定义函数可以直接用于匹配器进行验证。
+IsEven ==> 定义IsEven函数，检查参数n，符合条件则返回 1
+addtest(Truly(IsEven) ==> Truly 使用IsEven作为匹配器对入参1进行匹配。
+Value(==> 使用Value来调用IsEven匹配。
+EXPECT_THAT==> 使用 EXPECT_THAT来验证匹配器。

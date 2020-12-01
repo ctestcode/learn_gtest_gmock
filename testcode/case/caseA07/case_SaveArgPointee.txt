@@ -1,0 +1,5 @@
+SaveArgPointee ==> 使用场景: 保存指针参数所指的值或结构数据
+DoAll==> 使用DoAll，设置所有的动作，保存到变量 doall
+SaveArgPointee<0>(&abc) ==> 保存第一个指针变量的结构数据到 abc
+SaveArgPointee<1>(&a) ==> 保存第二个指针变量的值到 a
+ASSERT_STREQ  ==> 验证保存的值是否正确。

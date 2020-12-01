@@ -1,0 +1,5 @@
+ResultOf ==> 函数结果 匹配，使用场景：对复杂的struct结构体，制定匹配函数
+int CheckFunction(ABC *p) ==> 定义匹配函数CheckFunction，参数1的类型需要和匹配的参数相符
+auto m= ResultOf(&CheckFunction, Eq(1)) ==> 对函数的返回值设置验证规则，规则命名为m
+EXPECT_CALL(_mock,CheckABC(m,_)) ==> 使用m规则对第一个参数进行 验证
+EXPECT_TRUE(m.Matches(&abc)) ==> 用m规则对结构体进行验证。
